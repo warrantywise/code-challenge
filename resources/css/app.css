@@ -1,0 +1,33 @@
+/* MAIN LIST */
+.title-left {
+    display: block;
+    float: left; 
+    max-width: 50%;
+}
+.right-btn {
+    display: block;
+    float: right;
+    max-width: 50%;
+}
+/* TABLES */
+.table-header {
+    white-space: nowrap;
+    border-color: transparent;
+    border-bottom-color: inherit;
+    color: rgba(78, 78, 78, 0.274);
+    font-style: italic;
+}
+.table-body tr td {
+    border-color: transparent;
+    padding: 10px;
+}
+.table-body tr {
+    border: solid 1px inherit;
+}
+.table-body tr td:nth-child(4) {
+    min-width: 10%;
+}
+.table-body tr td:nth-child(5) {
+    white-space: nowrap;
+    text-align: right;
+}
