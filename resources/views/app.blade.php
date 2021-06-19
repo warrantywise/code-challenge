@@ -1,18 +1,18 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="csrf-token" content="{{ csrf_token() }}">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <title>Coding Challenge</title>
+        <meta name="csrf-token" value="{{ csrf_token() }}"/>
+        <title>Your Tasks</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Anton&family=Cabin&family=Dancing+Script:wght@500&family=Freckle+Face&family=Girassol&family=Playfair+Display&family=Zen+Dots&display=swap" rel="stylesheet"> 
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+        <link href="{{ mix('css/app.css') }}" type="text/css" rel="stylesheet"/>
     </head>
     <body>
-      <h1 class="text-center my-5">Hello World</h1>
-        {{-- Extra Credit --}}
-        {{-- <div class="content" id="app">
-           <router-view></router-view>
+        <div id="app">
         </div>
-        <script src="{{ mix('js/app.js') }}"></script> --}}
-     </body>
+        <script src="{{ mix('js/app.js') }}" type="text/javascript"></script>
+    </body>
 </html>

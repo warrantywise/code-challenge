@@ -1,38 +1,23 @@
 require('./bootstrap');
-// IMPORT
-import Vue from 'vue'
-import Vuex from 'vuex'
-import VueRouter from 'vue-router'
-import VueHead from 'vue-head'
-import Axios from 'axios'
-// Use
-Vue.use(VueHead)
-Vue.use(VueRouter)
-// Components
-const Home = require('./components/Home.vue').default
+import vue from 'vue'
+window.Vue = vue;
 
-const routes = [
-	{
-		path: '/',
-		component: Home,
-	},
-]
-// Router
+import App from './components/App.vue';
+import VueRouter from 'vue-router';
+import VueAxios from 'vue-axios';
+import axios from 'axios';
+import {routes} from './routes';
+ 
+Vue.use(VueRouter);
+Vue.use(VueAxios, axios);
+ 
 const router = new VueRouter({
-	routes,
-	mode: 'history',
-   scrollBehavior (to, from, savedPosition) {
-      if (savedPosition) {
-         return savedPosition
-      } else {
-         return { x: 0, y: 0 }
-      }
-   }
-})
-// App
+    mode: 'history',
+    routes: routes
+});
+ 
 const app = new Vue({
-	el: '#app',
-	router,
-	methods:{
-	}
-})
+    el: '#app',
+    router: router,
+    render: h => h(App),
+});
