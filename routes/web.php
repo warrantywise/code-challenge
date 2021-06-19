@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -10,8 +12,12 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::prefix('api')->group(function () {
-   // routes for
-});
+// Route::prefix('api')->group(function () {
 
-Route::get('/', 'AppController@show');
+// });
+
+// Route::get('/', 'AppController@show');
+
+Route::get('{any}', function () {
+   return view('app');
+})->where('any', '.*');
